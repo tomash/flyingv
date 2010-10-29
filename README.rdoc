@@ -8,15 +8,25 @@ FlyingV is a simple Ruby gem for interacting with OpenKeyValue[http://openkeyval
 
 == Requirements
 
-...
+  None. At the moment
 
 == Usage
 
-  FlyingV.post("123somekey", "And this is some value, 64kb being its length limit")
+    FlyingV.post("123somekey", "And this is some value, 64kb being its length limit")
+  => #<Net::HTTPOK 200 OK readbody=true>
   
-  FlyingV.get("123somekey")
+    FlyingV.get("123somekey")
   => "And this is some value, 64kb being its length limit"
+  
+It automagically (de-)serializes Arrays and Hashes to/from JSON if it's possible.
 
+    FlyingV.post("123somekey", {"flyingv" => "awesome", "limits" => 65536})
+  => #<Net::HTTPOK 200 OK readbody=true>
+  
+    FlyingV.get("123somekey")
+  => {"limits"=>65536, "flyingv"=>"awesome"}
+  
+Of course if you don't want that to happen, just pass a string as value.
 
 == Copyright
 
