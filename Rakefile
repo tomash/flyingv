@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "flyingv"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{TODO: simple OpenKeyValue API wrapper}
+    gem.description = %Q{TODO: for interacting with OpenKeyValue key-value storage}
     gem.email = "tomekrs@o2.pl"
     gem.homepage = "http://github.com/tomash/flyingv"
     gem.authors = ["Tomasz Stachewicz"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
