@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "flyingv.gemspec",
      "lib/flyingv.rb",
      "test/helper.rb",
      "test/test_flyingv.rb"
