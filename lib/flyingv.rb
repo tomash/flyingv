@@ -4,7 +4,7 @@ require 'net/http'
 class FlyingV
   def self.get(key)
     res = Net::HTTP.get(URI.parse("http://api.openkeyval.org/#{key}"))
-    JSON.parse(res.gsub('\\',""))
+    JSON.parse(res)
   rescue JSON::ParserError
     res
   end
