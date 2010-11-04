@@ -13,5 +13,10 @@ class FlyingV
     value = value.to_json if(value.is_a?(Hash) or value.is_a?(Array))
     Net::HTTP.post_form(URI.parse("http://api.openkeyval.org/#{key}"), {'data' => value})
   end
+  
+  def self.post_file(key, path)
+    value = File.open(path).read
+    self.post(key, value)
+  end
 
 end
